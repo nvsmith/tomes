@@ -15,6 +15,10 @@ const Home = () => {
             <Link href="/about" style={styles.link}>
                 About Page
             </Link>
+
+            <Link href="/contact" style={styles.link}>
+                Contact Page
+            </Link>
         </View>
     );
 };
