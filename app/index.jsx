@@ -4,6 +4,7 @@ import { Link } from "expo-router";
 // Themed Components
 import ThemedView from "../components/ThemedView";
 import ThemedLogo from "../components/ThemedLogo";
+import Spacer from "../components/Spacer";
 
 const Home = () => {
     return (
@@ -12,7 +13,9 @@ const Home = () => {
 
             <Text style={styles.title}>The Number 1</Text>
 
-            <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</Text>
+            <Spacer height={10} />
+            <Text>Reading List App</Text>
+            <Spacer />
 
             <Link href="/about" style={styles.link}>
                 About Page
