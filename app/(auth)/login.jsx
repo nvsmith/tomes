@@ -23,7 +23,9 @@ const Login = () => {
         </ThemedView>
     );
 };
+
 export default Login;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

@@ -18,12 +18,14 @@ const Register = () => {
             <Spacer height={100} />
 
             <Link href="/login" style={{ textAlign: "center" }}>
-                <ThemedText>Login Instead</ThemedText>
+                <ThemedText>Login instead</ThemedText>
             </Link>
         </ThemedView>
     );
 };
+
 export default Register;
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
