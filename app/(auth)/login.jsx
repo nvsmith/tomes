@@ -5,6 +5,7 @@ import { Colors } from "../../constants/Colors";
 // Themed Components
 import ThemedView from "../../components/ThemedView";
 import ThemedText from "../../components/ThemedText";
+import ThemedButton from "../../components/ThemedButton";
 import Spacer from "../../components/Spacer";
 
 const Login = () => {
@@ -20,9 +21,9 @@ const Login = () => {
                 Login to Your Account
             </ThemedText>
 
-            <Pressable onPress={handleSubmit} style={({ pressed }) => [styles.btn, pressed && styles.pressed]}>
+            <ThemedButton onPress={handleSubmit}>
                 <Text style={{ color: "#f2f2f2" }}>Login</Text>
-            </Pressable>
+            </ThemedButton>
 
             <Spacer height={100} />
 
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
+        alignItems: "center",
     },
     title: {
         textAlign: "center",
