@@ -10,6 +10,7 @@ const Create = () => {
             <ThemedText title={true} style={styles.heading}>
                 Add A New Book
             </ThemedText>
+            <Spacer />
         </ThemedView>
     );
 };
