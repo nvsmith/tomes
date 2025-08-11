@@ -12,8 +12,9 @@ import ThemedTextInput from "../../components/ThemedTextInput";
 
 const Login = () => {
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const handleSubmit = () => {
-        console.log("login form submitted");
+        console.log("login form submitted", email, password);
     };
 
     return (
@@ -30,6 +31,14 @@ const Login = () => {
                 keyboardType="email-address"
                 onChangeText={setEmail}
                 value={email}
+            />
+
+            <ThemedTextInput
+                style={{ width: "80%", marginBottom: 20 }}
+                placeholder="Password"
+                onChangeText={setPassword}
+                value={password}
+                secureTextEntry
             />
 
             <ThemedButton onPress={handleSubmit}>
