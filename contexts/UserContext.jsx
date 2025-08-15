@@ -7,7 +7,7 @@ export const UserContext = createContext();
 // Supply the user state + auth functions to its children.
 export function UserProvider({ children }) {
     // Initialize user state
-    const [user, setUser] = useState();
+    const [user, setUser] = useState(null);
 
     async function login(email, password) {}
 

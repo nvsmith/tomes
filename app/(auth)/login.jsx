@@ -2,6 +2,7 @@ import { StyleSheet, Pressable, Text, TextInput, TouchableWithoutFeedback, Keybo
 import { Link } from "expo-router";
 import { Colors } from "../../constants/Colors";
 import { useState } from "react";
+import { useUser } from "../../hooks/useUser";
 
 // Themed Components
 import ThemedView from "../../components/ThemedView";
@@ -13,7 +14,12 @@ import ThemedTextInput from "../../components/ThemedTextInput";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const { user } = useUser();
+
     const handleSubmit = () => {
+        console.log("current user", user);
+
         console.log("login form submitted", email, password);
     };
 
