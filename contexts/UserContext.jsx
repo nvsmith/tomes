@@ -30,7 +30,10 @@ export function UserProvider({ children }) {
         }
     }
 
-    async function logout() {}
+    async function logout() {
+        await account.deleteSession("current");
+        setUser(null);
+    }
 
     // Return the context provider
     // Make user state and auth functions available to any descendant component
