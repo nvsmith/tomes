@@ -39,16 +39,18 @@ export function UserProvider({ children }) {
     async function getInitialUserValue() {
         try {
             const response = await account.get();
+            setUser(response);
         } catch (error) {
             setUser(null);
         } finally {
+            // Indicate that auth status has been checked with the Appwrite server
             setAuthChecked(true);
         }
     }
 
     // Invoke on startup only
     useEffect(() => {
-        getInitialUserValue;
+        getInitialUserValue();
     }, []);
 
     // Return the context provider
